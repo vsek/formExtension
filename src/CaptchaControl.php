@@ -508,9 +508,9 @@ class CaptchaControl extends \Nette\Forms\Controls\TextBase
 
 		if (!isset($image->alt))
 			$image->alt = "Captcha";
-                $container->add($image);
+                $container->addHtml($image);
                 
-                $container->add(parent::getControl());
+                $container->addHtml(parent::getControl());
                 
 		return $container;
 	}

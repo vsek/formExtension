@@ -21,7 +21,7 @@ class Date extends \Nette\Forms\Controls\TextInput{
     }
     
     public function getControl() {
-        $container = Html::el()->add(parent::getControl());
+        $container = Html::el()->addHtml(parent::getControl());
         $javascript = Html::el();
         $javascript->setHtml('<script type="text/javascript">'
                 . '$(document).ready(function(){'
@@ -31,7 +31,7 @@ class Date extends \Nette\Forms\Controls\TextInput{
                 . '});'
                 . '</script>');
 
-        $container->add($javascript);
+        $container->addHtml($javascript);
         
         return $container;
     }

@@ -35,7 +35,7 @@ class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
     public function getControl()
     {
         $container = Html::el();
-        $container->add(parent::getControl()->style("width: 100%;"));
+        $container->addHtml(parent::getControl()->style("width: 100%;"));
         $script = Html::el();
         if($this->type == 'min'){
             $script->setHtml('<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
@@ -78,7 +78,7 @@ class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
             </script>
             ');
         }
-        $container->add($script);
+        $container->addHtml($script);
 
         return $container;
         
