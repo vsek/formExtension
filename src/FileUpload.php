@@ -62,7 +62,7 @@ class FileUpload extends \Nette\Forms\Controls\TextInput{
                 
             }
         }
-        if(!$this->isRequired() && $this->getValue() != null){
+        if($this->isRequired() && $this->getValue() != null){
             $delete = Html::el('a')->class('delete button1')->setText($this->getForm()->getPresenter()->translator->translate('admin.grid.delete'))->href('#');
             $control->addHtml($delete);
         }
