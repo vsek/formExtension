@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use \Nette\Utils\Html;
+use Nette\Utils\DateTime;
 
 /**
  * Description of Date
@@ -37,7 +38,7 @@ class Date extends \Nette\Forms\Controls\TextInput{
     }
     
     public function setValue($value) {
-        if($value instanceof \Nette\DateTime){
+        if($value instanceof DateTime){
             $value = $value->format($this->format);
         }
         parent::setValue($value);
