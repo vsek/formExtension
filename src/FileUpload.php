@@ -11,9 +11,9 @@ use \Nette\Utils\Html;
  */
 class FileUpload extends \Nette\Forms\Controls\TextInput{
     
-    private $imageOnly = true;
-    private $buttonText = 'Select file';
-    private $multiple = false;
+    protected $imageOnly = true;
+    protected $buttonText = 'Select file';
+    protected $multiple = false;
     
     /**
      * Nastavi text tlacitka
