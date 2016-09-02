@@ -47,7 +47,7 @@ class FileUpload extends \Nette\Forms\Controls\TextInput{
         $control = Html::el()->addHtml($input);
         
         //edit - zobrazim obrazek
-        if($this->getValue() != '' && !$this->isRequired()){
+        if($this->getValue() != ''){
             if(!$this->multiple){
                 if($this->imageOnly){
                     $image = Html::el('img')->src($this->getParent()->getParent()->link('Image:preview', $this->getValue(), 100, 100));
@@ -62,7 +62,7 @@ class FileUpload extends \Nette\Forms\Controls\TextInput{
                 
             }
         }
-        if($this->isRequired() && $this->getValue() != null){
+        if(!$this->isRequired() && $this->getValue() != null){
             $delete = Html::el('a')->class('delete button1')->setText($this->getForm()->getPresenter()->translator->translate('admin.grid.delete'))->href('#');
             $control->addHtml($delete);
         }
