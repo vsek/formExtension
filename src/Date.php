@@ -2,7 +2,6 @@
 
 namespace App\Form;
 
-use \Nette\Utils\Html;
 use Nette\Utils\DateTime;
 
 /**
@@ -22,19 +21,7 @@ class Date extends \Nette\Forms\Controls\TextInput{
     }
     
     public function getControl() {
-        $container = Html::el()->addHtml(parent::getControl());
-        $javascript = Html::el();
-        $javascript->setHtml('<script type="text/javascript">'
-                . '$(document).ready(function(){'
-                    . '$("#' . $this->getHtmlId() . '").datepicker({'
-                        . 'dateFormat: "' . $this->formatUi . '"'
-                    . '});'
-                . '});'
-                . '</script>');
-
-        $container->addHtml($javascript);
-        
-        return $container;
+        return parent::getControl()->class('jqueryuiDate')->dateFormat($this->formatUi);
     }
     
     public function setValue($value) {
