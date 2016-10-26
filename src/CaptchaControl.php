@@ -19,7 +19,7 @@ use Nette\Utils\Html;
 use Nette\Utils\Image;
 use Nette\Http\Session;
 
-class CaptchaControl extends \Nette\Forms\Controls\TextIput
+class CaptchaControl extends \Nette\Forms\Controls\TextInput
 {
 	/*	 * #@+ character groups */
 	const CONSONANTS = 'bcdfghjkmnpqrstvwxz'; // not 'l'
