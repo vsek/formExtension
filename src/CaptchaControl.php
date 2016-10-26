@@ -40,7 +40,7 @@ class CaptchaControl extends \Nette\Forms\Controls\TextInput
 	public static $defaultTextMargin = 25;
 
 	/** @var array from Image::rgb() */
-	public static $defaultBackgroundColor = array('red' => 255, 'green' => 255, 'blue' => 255);
+	public static $defaultBackgroundColor = array('red' => 255, 'green' => 255, 'blue' => 255, 'transparency' => 255);
 
 	/** @var int */
 	public static $defaultLength = 5;
@@ -285,7 +285,7 @@ class CaptchaControl extends \Nette\Forms\Controls\TextInput
 		if (!isset($rgb["red"]) || !isset($rgb["green"]) || !isset($rgb["blue"])) {
 			throw new \Nette\InvalidArgumentException("BackgroundColor must be valid rgb array, see Nette\Utils\Image::rgb()");
 		}
-		$this->backgroundColor = Image::rgb($rgb["red"], $rgb["green"], $rgb["blue"]);
+		$this->backgroundColor = Image::rgb($rgb["red"], $rgb["green"], $rgb["blue"], isset($rgb['transparency']) ? $rgb['transparency'] : 0);
 		return $this;
 	}
 
