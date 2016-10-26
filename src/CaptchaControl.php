@@ -631,7 +631,7 @@ class CaptchaControl extends \Nette\Forms\Controls\TextInput
 	 * @return bool
 	 * @throws \Nette\InvalidStateException
 	 */
-	public function validateCaptcha(CaptchaControl $control)
+	public static function validateCaptcha(CaptchaControl $control)
 	{
 		$parent = $control->getParent();
 		$uidFieldName = $control->getUidFieldName();
