@@ -13,14 +13,13 @@
 namespace PavelMaca\Captcha;
 
 use Nette;
-use Nette\Forms\Container as FormContainer;
 use Nette\Forms\Form;
 use Nette\Forms\Controls\HiddenField;
 use Nette\Utils\Html;
 use Nette\Utils\Image;
 use Nette\Http\Session;
 
-class CaptchaControl extends \Nette\Forms\Controls\TextBase
+class CaptchaControl extends \Nette\Forms\Controls\TextIput
 {
 	/*	 * #@+ character groups */
 	const CONSONANTS = 'bcdfghjkmnpqrstvwxz'; // not 'l'
@@ -161,7 +160,6 @@ class CaptchaControl extends \Nette\Forms\Controls\TextBase
 			self::$defaultFontFile = __DIR__ . "/fonts/Vera.ttf";
 
 
-		FormContainer::extensionMethod('addCaptcha', callback(__CLASS__, 'addCaptcha'));
 		self::$registered = TRUE;
 	}
 
