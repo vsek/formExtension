@@ -10,7 +10,7 @@ use \Nette\Utils\Html;
  */
 class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
 
-    private $type;
+    protected $type;
     
     /**
     * @param  string  control name
