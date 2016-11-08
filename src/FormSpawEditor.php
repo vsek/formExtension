@@ -50,7 +50,9 @@ class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
                             ],
                         filebrowserBrowseUrl :      "/ckeditor/filemanager/browser/default/browser.html?Connector=/ckeditor/filemanager/connectors/php/connector.php",
                         filebrowserImageBrowseUrl : "/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=/ckeditor/filemanager/connectors/php/connector.php",
-                        filebrowserFlashBrowseUrl : "/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=/ckeditor/filemanager/connectors/php/connector.php"
+                        filebrowserFlashBrowseUrl : "/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=/ckeditor/filemanager/connectors/php/connector.php",
+                        htmlEncodeOutput : false,
+                        entities : false
                     });
             </script>
             ');
@@ -73,7 +75,9 @@ class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
                         filebrowserBrowseUrl :      "/ckeditor/filemanager/browser/default/browser.html?Connector=/ckeditor/filemanager/connectors/php/connector.php",
                         filebrowserImageBrowseUrl : "/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=/ckeditor/filemanager/connectors/php/connector.php",
                         filebrowserFlashBrowseUrl : "/ckeditor/filemanager/browser/default/browser.html?Type=Flash&Connector=/ckeditor/filemanager/connectors/php/connector.php",
-                        extraAllowedContent: "a span"
+                        extraAllowedContent: "a span",
+                        htmlEncodeOutput : false,
+                        entities : false
                     });
             </script>
             ');
