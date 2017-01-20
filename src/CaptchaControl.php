@@ -501,8 +501,8 @@ class CaptchaControl extends \Nette\Forms\Controls\TextInput
 
 		$image = Html::el('img')->class('captcha');
 		$image->src = $this->getImageUri();
-		//$image->width = $this->getImageWidth();
-		//$image->height = $this->getImageHeight();
+		$image->width = $this->getImageWidth();
+		$image->height = $this->getImageHeight();
 
 		if (!isset($image->alt))
 			$image->alt = "Captcha";
