@@ -4,11 +4,11 @@ namespace App\Form;
 use \Nette\Utils\Html;
 
 /**
- * Description of SpawEditor
+ * Description of CkEditor
  *
  * @author Vsek
  */
-class FormSpawEditor extends \Nette\Forms\Controls\TextArea{
+class CkEditor extends \Nette\Forms\Controls\TextArea{
 
     protected $type;
     

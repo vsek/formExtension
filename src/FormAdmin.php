@@ -20,10 +20,10 @@ class Form extends \Nette\Application\UI\Form{
     
     /**
      * 
-     * @return \App\Form\FormSpawEditor
+     * @return \App\Form\CkEditor
      */
-    public function addSpawEditor($name, $label = NULL, $cols = 40, $rows = 10, $type = 'all'){
-        return $this[$name] = new \App\Form\FormSpawEditor($label, $cols, $rows, $type);
+    public function addCkEditor($name, $label = NULL, $cols = 40, $rows = 10, $type = 'all'){
+        return $this[$name] = new \App\Form\CkEditor($label, $cols, $rows, $type);
     }
     
     /**
