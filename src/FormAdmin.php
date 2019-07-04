@@ -40,7 +40,7 @@ class Form extends \Nette\Application\UI\Form{
     * @param  string  control name
     * @param  string  label
     * @param  bool  allows to upload multiple files
-    * @return Nette\Forms\Controls\UploadControl
+    * @return \App\Form\FileUpload
     */
     public function addUpload($name, $label = NULL, $multiple = FALSE, $onlyImage = true)
     {

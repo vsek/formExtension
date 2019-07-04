@@ -19,6 +19,21 @@ class Date extends \Nette\Forms\Controls\TextInput{
         $this->format = $format;
         $this->formatUi = $formatUI;
     }
+
+    /**
+     * @return mixed|\Nette\Utils\DateTime
+     * @throws \Exception
+     */
+    public function getValue()
+    {
+        $value = parent::getValue();
+        if(is_null($value) || $value == ''){
+            return $value;
+        }else{
+            $date = \Nette\Utils\DateTime::createFromFormat($this->format, $value);
+            return $date;
+        }
+    }
     
     public function getControl() {
         return parent::getControl()->class('jqueryuiDate')->dateFormat($this->formatUi);
